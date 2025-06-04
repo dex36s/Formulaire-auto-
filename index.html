@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de Soumission Auto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>1. Informations personnelles</h2>
+  <form action="https://formspree.io/f/mvgrgknb" method="POST">
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom">
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom">
+
+    <label for="dob">Date de naissance</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="etatcivil">État civil</label>
+    <select id="etatcivil" name="etatcivil">
+      <option value="celibataire">Célibataire</option>
+      <option value="marie">Marié(e)</option>
+      <option value="divorce">Divorcé(e)</option>
+      <option value="veuf">Veuf / Veuve</option>
+    </select>
+
+    <label for="sexe">Sexe</label>
+    <select id="sexe" name="sexe">
+      <option value="homme">Homme</option>
+      <option value="femme">Femme</option>
+      <option value="autre">Autre</option>
+    </select>
+
+    <label for="langue">Langue</label>
+    <select id="langue" name="langue">
+      <option value="francais">Français</option>
+      <option value="anglais">Anglais</option>
+    </select>
+
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" name="adresse">
+
+    <label for="tel">Numéro de téléphone</label>
+    <input type="tel" id="tel" name="tel">
+
+    <label for="courriel">Courriel</label>
+    <input type="email" id="courriel" name="courriel">
+
+    <h2>2. Informations sur le véhicule</h2>
+    <label for="marque">Marque</label>
+    <input type="text" id="marque" name="marque">
+
+    <label for="modele">Modèle</label>
+    <input type="text" id="modele" name="modele">
+
+    <label for="annee">Année</label>
+    <input type="number" id="annee" name="annee" min="1900" max="2100">
+
+    <label for="vin">Numéro de série (VIN)</label>
+    <input type="text" id="vin" name="vin">
+
+    <label for="etat">Véhicule neuf ou usagé?</label>
+    <select id="etat" name="etat">
+      <option value="neuf">Neuf</option>
+      <option value="usage">Usagé</option>
+    </select>
+
+    <label for="achat_date">Date d'achat</label>
+    <input type="date" id="achat_date" name="achat_date">
+
+    <label for="achat_type">Mode d'acquisition</label>
+    <select id="achat_type" name="achat_type">
+      <option value="achete">Acheté</option>
+      <option value="loue">Loué</option>
+    </select>
+
+    <label for="creancier">Nom du créancier ou locateur</label>
+    <input type="text" id="creancier" name="creancier">
+
+    <h2>3. Détails d'assurance</h2>
+    <label for="sinistres">Sinistres dans les 5 dernières années?</label>
+    <select id="sinistres" name="sinistres">
+      <option value="oui">Oui</option>
+      <option value="non">Non</option>
+    </select>
+
+    <label for="rc">Responsabilité civile</label>
+    <select id="rc" name="rc">
+      <option value="1000000">1 000 000$</option>
+      <option value="2000000">2 000 000$</option>
+    </select>
+
+    <label for="collision">Collision (franchise)</label>
+    <select id="collision" name="collision">
+      <option value="250">250$</option>
+      <option value="500">500$</option>
+      <option value="1000">1000$</option>
+    </select>
+
+    <label for="comprehensive">Tous risques sauf collision (franchise)</label>
+    <select id="comprehensive" name="comprehensive">
+      <option value="250">250$</option>
+      <option value="500">500$</option>
+      <option value="1000">1000$</option>
+    </select>
+
+    <label for="faq">Options</label>
+    <select id="faq" name="faq" multiple>
+      <option value="faq41">FAQ 41 - Suppression des franchises en cas de perte totale</option>
+      <option value="faq20">FAQ 20 - Véhicule de courtoisie</option>
+      <option value="faq27">FAQ 27 - Extension de responsabilité</option>
+    </select>
+
+    <button type="submit">Soumettre</button>
+  </form>
+</body>
+</html>
